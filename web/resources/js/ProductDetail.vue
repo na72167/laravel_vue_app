@@ -1,9 +1,6 @@
 <template>
   <body class="page-productDetail page-1colum">
     <!-- ヘッダー -->
-    <?php
-      require('header.php');
-    ?>
 
     <!-- メインコンテンツ -->
     <div id="contents" class="site-width">
@@ -48,9 +45,7 @@
     </div>
 
     <!-- footer -->
-    <?php
-    require('footer.php');
-    ?>
+
 </body>
 </template>
    <style>

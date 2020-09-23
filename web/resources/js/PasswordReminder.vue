@@ -2,9 +2,6 @@
    <body class="page-signup page-1colum">
 
     <!-- メニュー -->
-    <?php
-    require('header.php');
-    ?>
 
     <!-- メインコンテンツ -->
     <div id="contents" class="site-width">
@@ -41,8 +38,6 @@
     </div>
 
     <!-- footer -->
-    <?php
-    require('footer.php');
-    ?>
+
   </body>
 </template>

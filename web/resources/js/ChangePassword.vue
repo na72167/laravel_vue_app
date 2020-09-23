@@ -1,9 +1,6 @@
 <template>
     <body class="page-passEdit page-2colum page-logined">
     <!-- メニュー -->
-    <?php
-      require('header.php');
-    ?>
 
     <!-- メインコンテンツ -->
     <div id="contents" class="site-width">
@@ -57,9 +54,6 @@
       ?>
     </div>
     <!-- footer -->
-    <?php
-    require('footer.php');
-    ?>
     </body>
 </template>
 <style>

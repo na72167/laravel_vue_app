@@ -1,9 +1,6 @@
 <template>
    <body class="page-mypage page-2colum page-logined">
     <!-- メニュー -->
-    <?php
-      require('header.php');
-    ?>
 
     <p id="js-show-msg" style="display:none;" class="msg-slide">
       <?php echo getSessionFlash('msg_success'); ?>
@@ -109,9 +106,6 @@
     </div>
 
     <!-- footer -->
-    <?php
-      require('footer.php');
-    ?>
   </body>
 </template>
 <style>

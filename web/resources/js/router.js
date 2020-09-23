@@ -38,6 +38,10 @@ const routes = [
     component: Top
   },
   {
+    path: '/',
+    component: Top
+  },
+  {
     path: '/mypage',
     component: Mypage
   },

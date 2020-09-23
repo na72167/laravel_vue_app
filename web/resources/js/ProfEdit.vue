@@ -2,9 +2,6 @@
   <body class="page-profEdit page-2colum page-logined">
 
   <!-- メニュー -->
-  <?php
-  require('header.php');
-  ?>
 
   <!-- メインコンテンツ -->
   <div id="contents" class="site-width">
@@ -98,8 +95,6 @@
   </div>
 
   <!-- footer -->
-  <?php
-  require('footer.php');
-  ?>
+
   </body>
 </template>

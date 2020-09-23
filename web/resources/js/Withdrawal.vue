@@ -1,10 +1,6 @@
 <template>
   <body class="page-withdraw page-1colum">
 
-    <!-- メニュー -->
-    <!-- <?php
-    require('header.php');
-    ?> -->
 
     <!-- メインコンテンツ -->
     <div id="contents" class="site-width">

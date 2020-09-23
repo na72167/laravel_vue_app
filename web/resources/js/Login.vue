@@ -1,12 +1,10 @@
 <template>
-    <body class="page-login page-1colum">
+  <body class="page-login page-1colum">
 
     <!-- ヘッダー -->
-    <?php
-      require('header.php');
-    ?>
     <p id="js-show-msg" style="display:none;" class="msg-slide">
-      <?php echo getSessionFlash('msg_success'); ?>
+      <!-- サクセスメッセージを出力する処理を書く
+        <?php echo getSessionFlash('msg_success'); ?> -->
     </p>
 
     <!-- メインコンテンツ -->
@@ -17,30 +15,34 @@
 
        <div class="form-container">
 
-         <form action="" method="post" class="form">
+         <form action="" method="post" class="form" @submit.prevent="login">
            <h2 class="title">ログイン</h2>
            <div class="area-msg">
-             <?php
-              if(!empty($err_msg['common'])) echo $err_msg['common'];
-             ?>
+             <!-- 全体的なエラーを吐き出す処理を書く <?php
+              if(!empty($err_msg['common'])) echo $err_msg['common'];?>
+             -->
            </div>
            <label class="<?php if(!empty($err_msg['email'])) echo 'err'; ?>">
             メールアドレス
-             <input type="text" name="email" value="<?php if(!empty($_POST['email'])) echo $_POST['email']; ?>">
+             <input type="text" name="email" v-model="loginForm.email">
            </label>
            <div class="area-msg">
+             <!-- email関係のエラーを吐き出す処理を書く
              <?php
              if(!empty($err_msg['email'])) echo $err_msg['email'];
              ?>
+             -->
            </div>
            <label class="<?php if(!empty($err_msg['pass'])) echo 'err'; ?>">
              パスワード
-             <input type="password" name="pass" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass']; ?>">
+             <input type="password" name="pass"  v-model="loginForm.password">
            </label>
            <div class="area-msg">
-             <?php
+             <!-- password関係のエラーを吐き出す処理を書く
+            <?php
              if(!empty($err_msg['pass'])) echo $err_msg['pass'];
              ?>
+             -->
            </div>
            <label>
              <input type="checkbox" name="pass_save">次回ログインを省略する
@@ -57,8 +59,23 @@
     </div>
 
     <!-- footer -->
-    <?php
-    require('footer.php');
-    ?>
-</body>
+
+  </body>
 </template>
+<script>
+  export default {
+      data () {
+      return {
+        loginForm: {
+          email: '',
+          password: ''
+          },
+        }
+      },
+      methods: {
+        login() {
+          console.log(this.loginForm)
+        }
+      }
+  }
+</script>
